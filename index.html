@@ -112,6 +112,29 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		
+			var conflictName = "Yugoslav Wars";
+		
+			var numberOfCountriesSplitInto = 6; 
+		
+			var isTheWarOver = true;
+		
+			var yugoslavia = {
+				members: [ 'Croatia', 'Bosnia and Herzegovina', 'Serbia', 'Montenegro', 'Macedonia' ],
+				subentities: [ 'Kosovo' ]
+			};
+			
+			var wars = { /* TODO: start & end years might not be accurate - need to double check */
+				'Slovenia': { start: 1991, end: 1991 },
+				'Croatia' : { start: 1991, end: 1995, maxSerbiaRefugeeCount: 290000 },
+				'Bosnia'  : { start: 1991, end: 1996, maxSerbiaRefugeeCount: 260000 },
+				'Kosovo'  : { start: 1995, end: 2000, currentIdpCount: 280000 },
+				'Macedonia':{ start: 2001, end: 2002 }
+			};
+
+			
+		</script>
 	</body>
 </html>
 
