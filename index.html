@@ -113,26 +113,33 @@
 			</div>
 		</div>
 		<script>
-		
-			var conflictName = "Yugoslav Wars";
-		
-			var numberOfCountriesSplitInto = 6; 
-		
-			var isTheWarOver = true;
-		
-			var yugoslavia = {
-				members: [ 'Croatia', 'Bosnia and Herzegovina', 'Serbia', 'Montenegro', 'Macedonia' ],
-				subentities: [ 'Kosovo' ]
-			};
+			/* a. a number */
+			var numberOfCountriesYugoslaviaSplitInto = 7; 
+			/* although Montenegro split off peacefully several years after the war */
 			
-			var wars = { /* TODO: start & end years might not be accurate - need to double check */
-				'Slovenia': { start: 1991, end: 1991 },
-				'Croatia' : { start: 1991, end: 1995, maxSerbiaRefugeeCount: 290000 },
-				'Bosnia'  : { start: 1991, end: 1996, maxSerbiaRefugeeCount: 260000 },
-				'Kosovo'  : { start: 1995, end: 2000, currentIdpCount: 280000 },
-				'Macedonia':{ start: 2001, end: 2002 }
+			/* b. a string */
+			var researchTopic = "Croatian and Bosnian Refugees in Serbia";
+		
+			/* c. a Boolean */
+			var isItSafeToReturnToCountriesOfOrigin = true;
+			/* barrier to return is no longer physical safety but other factors  */
+		
+			/* d. an array of at least 5 items*/
+			var federalSubjectsOfYugoslavia = [ "Bosnia and Herzegovina", "Croatia", "Macedonia", "Montenegro", "Serbia", "Slovenia" ];
+			/* Kosovo was not a federal subject but a special province of Serbia*/
+			
+			/* e. an object with at least 4 distinct properties, at least one of which must be a list, and another of which must be an object */
+			var BosniaAndHerzegovina = {
+				independenceDate: new Date(1992, 4, 6), /* intl recognition date - declaration was one month prior */
+				capital: "Sarajevo",
+				entities: ["Federation of Bosnia and Herzegovina", "Republika Srpska"],
+				percentagesOfPopulation: { /* per 2013 census */
+					bosniaks: 0.5011,
+					serbs:    0.3078,
+					croats:   0.1543,
+					others:   0.0273
+				}
 			};
-
 			
 		</script>
 	</body>
