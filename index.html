@@ -125,7 +125,13 @@
 			/* barrier to return is no longer physical safety but other factors  */
 		
 			/* d. an array of at least 5 items*/
-			var federalSubjectsOfYugoslavia = [ "Bosnia and Herzegovina", "Croatia", "Macedonia", "Montenegro", "Serbia", "Slovenia" ];
+			var federalSubjectsOfYugoslavia = [ 
+				{ name: "Bosnia and Herzegovina"}, 
+				{ name: "Croatia"}, 
+				{ name: "Macedonia"}, 
+				{ name: "Montenegro"}, 
+				{ name: "Serbia"}, 
+				{ name: "Slovenia"} ];
 			/* Kosovo was not a federal subject but a special province of Serbia*/
 			
 			/* e. an object with at least 4 distinct properties, at least one of which must be a list, and another of which must be an object */
@@ -142,9 +148,75 @@
 			};
 			
 			/* Extra Credit */
-			console.log(federalSubjectsOfYugoslavia[4]);
+			console.log(federalSubjectsOfYugoslavia[4].name);
 			console.log(BosniaAndHerzegovina.capital);
 			
+			/* The below is actually a list of objects; each object is an article */
+				var my_articles = [{
+
+					"title" : "The Scale of the Migrant Crisis, From 160 to Millions",
+
+					"source" : "nytimes",
+
+					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
+
+					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
+
+					"summary" : "Summary here."
+
+				}, {
+
+					"title" : "Comprendre la crise des migrants en Europe en cartes, graphiques et vidéos",
+
+					"source" : "lemonde",
+
+					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
+
+					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
+
+					"summary" : "Summary here."
+
+				}, {
+
+					"title" : "Comprendre la crise des migrants en Europe en cartes, graphiques et vidéos",
+
+					"source" : "lemonde",
+
+					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
+
+					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
+
+					"summary" : "Summary here."
+
+				}, {
+
+					"title" : "Going Home to Falluja, a City Slipping Back Into Turmoil",
+
+					"source" : "nytimes",
+
+					"url" : "https://www.nytimes.com/2017/02/10/world/middleeast/falluja-iraq-isis.html?rref=collection%2Ftimestopic%2FRefugees%20and%20Displaced%20People&action=click&contentCollection=timestopics&region=stream&module=stream_unit&version=latest&contentPlacement=6&pgtype=collection",
+
+					"image" : "",
+
+					"summary" : "Summary here."
+
+				}];
+		/*
+		 * Goal: sort through my list of articles and console.log only the ones that came from the new york times
+		 
+		for (var i=0;i < my_articles.length;i++) {
+			if (my_articles[i].source === "nytimes") {
+				console.log(my_articles[i]);
+			}
+		} */
+		
+		my_articles.forEach(function(article) {
+			if (article.source === "nytimes") {
+				console.log(article);
+			} else {
+				console.log("Not NYTimes");
+			}})
+		
 		</script>
 	</body>
 </html>
