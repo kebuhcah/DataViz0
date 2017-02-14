@@ -4,38 +4,38 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Serbian Refugees from Croatia and Bosnia-Herzegovina</title>
-		<!-- 
-			include bootstrap css for grid layout 
+		<!--
+			include bootstrap css for grid layout
 		-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<style>
 			img {
 			    max-width: 100%;
 			}
-			
+
 			.headline-box {
 				font-family:Impact;
 				font-size:24px;
 				text-decoration:underline; /* force underlining to make it clear that the headline is a link */
 			}
-			
+
 			.summary-box {
 				font-family:Helvetica,Arial;
 				font-size:12px;
 			}
-			
+
 			.thumbnail-box { /* add margins so the outline isn't clipped off by the edges of the page */
 				outline-style:solid;
 				margin-right: 5px;
 			    margin-left: 5px;
 			}
-			
+
 			p { /* add some padding so the text isn't so tightly packed */
 			    padding-top: 10px;
 			    padding-right: 10px;
 			    padding-left: 10px;
-			}		
-			
+			}
+
 		</style>
 	</head>
 	<body>
@@ -44,7 +44,7 @@
 				<div class="headline-box">
 					<!-- each headline is also a link to a relevant article -->
 					<a href="http://www.balkaninsight.com/en/article/operation-storm-croatia-s-triumph-serbia-s-grief-07-31-2015">
-						Origins: Operation "Storm" and the Fall of the Serbian Krajina 
+						Origins: Operation "Storm" and the Fall of the Serbian Krajina
 					</a>
 				</div>
 				<div class="thumbnail-box">
@@ -90,7 +90,7 @@
 				</div>
 				<div class="summary-box">
 					<p>This study, published by a Serbian human rights NGO and co-funded by the Croatian government and the European Union,
-					provides a detailed analysis of the current refugee situation in the region, and examines refugees' attitude towards both return to Croatia and local integration in Serbia - 
+					provides a detailed analysis of the current refugee situation in the region, and examines refugees' attitude towards both return to Croatia and local integration in Serbia -
 					which are often complicated by questions of national identity and allegiance.</p>
 					<p>(Image: <a href="https://commons.wikimedia.org/wiki/File:Map_of_war_in_Yugoslavia,_1993.png">Wikimedia</a>)</p>
 				</div>
@@ -107,33 +107,33 @@
 				<div class="summary-box">
 					<p>While the number of refugees from Croatia and Bosnia in Serbia at the end of the war was roughly equal, refugees from Croatia now constitute around 80% of those remaining in Serbia.</p>
 					<p>A major reason for this discrepancy has been the difficulties that Serb refugees face in securing tenancy rights to their prior homes. This study examines these difficulties and their causes in some detail.</p>
-					<p>(Image: apartments in Karlovac, Croatia that the Croatian government has made available to returnees at favorable prices, from 
+					<p>(Image: apartments in Karlovac, Croatia that the Croatian government has made available to returnees at favorable prices, from
 						<a href="http://kaportal.rtl.hr/vlada-srbima-povratnicima-omogucila-kupnju-dodijeljenih-stanova-u-karlovcu-njih-180/">a local Karlovac news site</a>)</p>
 				</div>
 			</div>
 		</div>
 		<script>
 			/* a. a number */
-			var numberOfCountriesYugoslaviaSplitInto = 7; 
+			var numberOfCountriesYugoslaviaSplitInto = 7;
 			/* although Montenegro split off peacefully several years after the war */
-			
+
 			/* b. a string */
 			var researchTopic = "Croatian and Bosnian Refugees in Serbia";
-		
+
 			/* c. a Boolean */
 			var isItSafeToReturnToCountriesOfOrigin = true;
 			/* barrier to return is no longer physical safety but other factors  */
-		
+
 			/* d. an array of at least 5 items*/
-			var federalSubjectsOfYugoslavia = [ 
-				{ name: "Bosnia and Herzegovina"}, 
-				{ name: "Croatia"}, 
-				{ name: "Macedonia"}, 
-				{ name: "Montenegro"}, 
-				{ name: "Serbia"}, 
+			var federalSubjectsOfYugoslavia = [
+				{ name: "Bosnia and Herzegovina"},
+				{ name: "Croatia"},
+				{ name: "Macedonia"},
+				{ name: "Montenegro"},
+				{ name: "Serbia"},
 				{ name: "Slovenia"} ];
 			/* Kosovo was not a federal subject but a special province of Serbia*/
-			
+
 			/* e. an object with at least 4 distinct properties, at least one of which must be a list, and another of which must be an object */
 			var BosniaAndHerzegovina = {
 				independenceDate: new Date(1992, 4, 6), /* intl recognition date - declaration was one month prior */
@@ -146,78 +146,46 @@
 					others:   0.0273
 				}
 			};
-			
+
 			/* Extra Credit */
 			console.log(federalSubjectsOfYugoslavia[4].name);
 			console.log(BosniaAndHerzegovina.capital);
-			
-			/* The below is actually a list of objects; each object is an article */
-				var my_articles = [{
 
-					"title" : "The Scale of the Migrant Crisis, From 160 to Millions",
+			/*  */
+			var communicationOperations = [{
+				"type" : "Community Liaison Officer (CLO) Program",
+				"provider" : "IOM Indonesia",
+				"audience": "potential irregular immigrants under IOM supervision (i.e. in detention centers)",
+				"details": "CLOs with relevant Dari/Farsi, Tamil and Arabic language skills meet with detainees on a regular basis to discuss Australian Government messaging and relevant news stories, and report back to IOM with information on detainee reactions and receptiveness to such messaging."
+			}, {
+				"type" : "Public Information Campaign Targeting Crew",
+				"provider" : "IOM Indonesia",
+				"audience": "potential people smuggling facilitators",
+				"details": "IOM spreads anti-smuggling awareness throughout 14 impoverished fishing villages in east Indonesia considered to be at risk of turning to people smuggling. Information is spread through a variety of channels - in the past these have included: hosting outdoor movie nights, handing out materials at booths in the market (which also provide family photo services and branded merchandise), providing religious leaders with smuggling-themed sermon booklets,  holding workshops with community leaders, and organizing \"Proud Fisherman Day\" festivities."
+			}, {
+				"type" : "Physical Advertising",
+				"provider" : "Leo Burnett (advertising agency)",
+				"audience": "potential irregular immigrants",
+				"details": "Leo Burnett has been engaged to deliver and place leaflets, posters, banners and billboards in 17 cities across Indonesia."
+			}, {
+				"type" : "Online Advertising",
+				"provider" : "Universal McCann (advertising agency)",
+				"audience": "potential irregular immigrants",
+				"details": "UM advertising is delivered through Cadreon (sponsored advertising on internet pages), Google search, Facebook and YouTube advertising. UM advertising targets those cohorts in Indonesia (Iranian, Afghan, Sri Lankan, Pakistani and Iraqi) searching in their native languages."
+			}];
 
-					"source" : "nytimes",
-
-					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
-
-					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
-
-					"summary" : "Summary here."
-
-				}, {
-
-					"title" : "Comprendre la crise des migrants en Europe en cartes, graphiques et vidéos",
-
-					"source" : "lemonde",
-
-					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
-
-					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
-
-					"summary" : "Summary here."
-
-				}, {
-
-					"title" : "Comprendre la crise des migrants en Europe en cartes, graphiques et vidéos",
-
-					"source" : "lemonde",
-
-					"url" : "https://www.nytimes.com/interactive/2015/09/10/world/europe/scale-of-migrant-crisis-in-europe.html",
-
-					"image" : "https://blog.webkid.io/refugee-crisis-visualization-collection/1442402221_e3cd2e19d79a4aa7baac8bf878d95080.png",
-
-					"summary" : "Summary here."
-
-				}, {
-
-					"title" : "Going Home to Falluja, a City Slipping Back Into Turmoil",
-
-					"source" : "nytimes",
-
-					"url" : "https://www.nytimes.com/2017/02/10/world/middleeast/falluja-iraq-isis.html?rref=collection%2Ftimestopic%2FRefugees%20and%20Displaced%20People&action=click&contentCollection=timestopics&region=stream&module=stream_unit&version=latest&contentPlacement=6&pgtype=collection",
-
-					"image" : "",
-
-					"summary" : "Summary here."
-
-				}];
-		/*
-		 * Goal: sort through my list of articles and console.log only the ones that came from the new york times
-		 
-		for (var i=0;i < my_articles.length;i++) {
-			if (my_articles[i].source === "nytimes") {
-				console.log(my_articles[i]);
+			/*
+			 * Goal: sort through my list of communication operations and console.log only the ones carried out by IOM
+			 */
+			for (var i=0;i < communicationOperations.length;i++) {
+				var op = communicationOperations[i];
+				if (op.provider === "IOM Indonesia") {
+					console.log(op);
+				} else {
+					console.log("Not an IOM operation");
+				}
 			}
-		} */
-		
-		my_articles.forEach(function(article) {
-			if (article.source === "nytimes") {
-				console.log(article);
-			} else {
-				console.log("Not NYTimes");
-			}})
-		
+
 		</script>
 	</body>
 </html>
-
