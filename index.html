@@ -151,7 +151,11 @@
 			console.log(federalSubjectsOfYugoslavia[4].name);
 			console.log(BosniaAndHerzegovina.capital);
 
-			/*  */
+			/*
+			 * Australian Counter People Smuggling Communication Activities in Indonesia
+			 * As described in a brief from the "Indonesia-Australia 13TH Customs-to-Customs Bilateral Discussions"
+			 * (document acquired from Australian Border Department FOI archive)
+			 */
 			var communicationOperations = [{
 				"type" : "Community Liaison Officer (CLO) Program",
 				"provider" : "IOM Indonesia",
@@ -178,10 +182,14 @@
 			 * Goal: sort through my list of communication operations and console.log only the ones carried out by IOM
 			 */
 			for (var i=0;i < communicationOperations.length;i++) {
+				// stored in a variable for later reference
 				var op = communicationOperations[i];
+				// check if provider is IOM Indonesia
 				if (op.provider === "IOM Indonesia") {
+					// if so, log operation object
 					console.log(op);
 				} else {
+					// if not, print message
 					console.log("Not an IOM operation");
 				}
 			}
