@@ -37,14 +37,14 @@
 				// Set chart options
 				var options = {
 					'title' : 'How Much Pizza I Ate Last Night',
-					'width' : 800,
+					'width' : 600,
 					'height' : 600,
 					'is3D' : true,
 					//'pieHole' : 0.3,
-					'slices': { 0: { offset: 0.3, textStyle: {color: 'pink', fontName: 'Impact', fontSize: 32 } }, 2: { color: 'transparent' } },
+					'slices': { 0: { offset: 0.3, textStyle: {color: 'pink', fontName: 'Impact', fontSize: 20  } }, 2: { color: 'transparent' } },
 					backgroundColor: 'gold',
 					fontName: 'Comic Sans MS',
-					fontSize: 20,
+					fontSize: 12 ,
 					legend: { textStyle: { bold: true } },
 					titleTextStyle: { italic: true  }
 				};
@@ -57,9 +57,9 @@
 		
 	</head>
 	<body>
-		<div id="chart_div">.</div>
 		<div class="row">
-			<div class="story-cell col-md-6">
+			<div class="story-cell col-md-4" id="chart_div">.</div>
+			<div class="story-cell col-md-4">
 				<div class="headline-box">
 					<!-- each headline is also a link to a relevant article -->
 					<a href="http://www.balkaninsight.com/en/article/operation-storm-croatia-s-triumph-serbia-s-grief-07-31-2015">
@@ -80,7 +80,7 @@
 					<p>This article from Balkan Insight provides more background to this pivotal event in the Yugoslav Wars, and explores how different interpretations of this operation continue to divide Croatia and Serbia to this day.</p>
 				</div>
 			</div>
-			<div class="story-cell col-md-6">
+			<div class="story-cell col-md-4">
 				<div class="headline-box">
 					<a href="http://www.kirs.gov.rs/articles/rprocess.php?lang=ENG">
 						Brief History of Regional Efforts to Resolve the Refugee Issue
