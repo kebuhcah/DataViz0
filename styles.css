@@ -1,0 +1,26 @@
+img {
+	max-width: 100%;
+}
+
+.headline-box {
+	font-family: Impact;
+	font-size: 24px;
+	text-decoration: underline; /* force underlining to make it clear that the headline is a link */
+}
+
+.summary-box {
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+}
+
+.thumbnail-box {/* add margins so the outline isn't clipped off by the edges of the page */
+	outline-style: solid;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+p {/* add some padding so the text isn't so tightly packed */
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}

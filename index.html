@@ -8,37 +8,56 @@
 			include bootstrap css for grid layout
 		-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		<style>
-			img {
-			    max-width: 100%;
-			}
+		<link rel="stylesheet" href="styles.css " />
+		
+		<!--Load the AJAX API-->
+		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			// script example loade from https://developers.google.com/chart/interactive/docs/quick_start 
+		
+			// Load the Visualization API and the corechart package.
+			google.charts.load('current', {
+				'packages' : ['corechart']
+			});
 
-			.headline-box {
-				font-family:Impact;
-				font-size:24px;
-				text-decoration:underline; /* force underlining to make it clear that the headline is a link */
-			}
+			// Set a callback to run when the Google Visualization API is loaded.
+			google.charts.setOnLoadCallback(drawChart);
 
-			.summary-box {
-				font-family:Helvetica,Arial;
-				font-size:12px;
-			}
+			// Callback that creates and populates a data table,
+			// instantiates the pie chart, passes in the data and
+			// draws it.
+			function drawChart() {
 
-			.thumbnail-box { /* add margins so the outline isn't clipped off by the edges of the page */
-				outline-style:solid;
-				margin-right: 5px;
-			    margin-left: 5px;
-			}
+				// Create the data table.
+				var data = new google.visualization.DataTable();
+				data.addColumn('string', 'Topping');
+				data.addColumn('number', 'Slices');
+				data.addRows([['Mushrooms', 3], ['Onions', 1], ['Olives', 1], ['Zucchini', 1], ['Pepperoni', 2 ]]);
 
-			p { /* add some padding so the text isn't so tightly packed */
-			    padding-top: 10px;
-			    padding-right: 10px;
-			    padding-left: 10px;
-			}
+				// Set chart options
+				var options = {
+					'title' : 'How Much Pizza I Ate Last Night',
+					'width' : 800,
+					'height' : 600,
+					'is3D' : true,
+					//'pieHole' : 0.3,
+					'slices': { 0: { offset: 0.3, textStyle: {color: 'pink', fontName: 'Impact', fontSize: 32 } }, 2: { color: 'transparent' } },
+					backgroundColor: 'gold',
+					fontName: 'Comic Sans MS',
+					fontSize: 20,
+					legend: { textStyle: { bold: true } },
+					titleTextStyle: { italic: true  }
+				};
 
-		</style>
+				// Instantiate and draw our chart, passing in some options.
+				var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+				chart.draw(data, options);
+			}
+		</script>
+		
 	</head>
 	<body>
+		<div id="chart_div">.</div>
 		<div class="row">
 			<div class="story-cell col-md-6">
 				<div class="headline-box">
@@ -112,88 +131,6 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			/* a. a number */
-			var numberOfCountriesYugoslaviaSplitInto = 7;
-			/* although Montenegro split off peacefully several years after the war */
-
-			/* b. a string */
-			var researchTopic = "Croatian and Bosnian Refugees in Serbia";
-
-			/* c. a Boolean */
-			var isItSafeToReturnToCountriesOfOrigin = true;
-			/* barrier to return is no longer physical safety but other factors  */
-
-			/* d. an array of at least 5 items*/
-			var federalSubjectsOfYugoslavia = [
-				{ name: "Bosnia and Herzegovina"},
-				{ name: "Croatia"},
-				{ name: "Macedonia"},
-				{ name: "Montenegro"},
-				{ name: "Serbia"},
-				{ name: "Slovenia"} ];
-			/* Kosovo was not a federal subject but a special province of Serbia*/
-
-			/* e. an object with at least 4 distinct properties, at least one of which must be a list, and another of which must be an object */
-			var BosniaAndHerzegovina = {
-				independenceDate: new Date(1992, 4, 6), /* intl recognition date - declaration was one month prior */
-				capital: "Sarajevo",
-				entities: ["Federation of Bosnia and Herzegovina", "Republika Srpska"],
-				percentagesOfPopulation: { /* per 2013 census */
-					bosniaks: 0.5011,
-					serbs:    0.3078,
-					croats:   0.1543,
-					others:   0.0273
-				}
-			};
-
-			/* Extra Credit */
-			console.log(federalSubjectsOfYugoslavia[4].name);
-			console.log(BosniaAndHerzegovina.capital);
-
-			/*
-			 * Australian Counter People Smuggling Communication Activities in Indonesia
-			 * As described in a brief from the "Indonesia-Australia 13TH Customs-to-Customs Bilateral Discussions"
-			 * (document acquired from Australian Border Department FOI archive)
-			 */
-			var communicationOperations = [{
-				"type" : "Community Liaison Officer (CLO) Program",
-				"provider" : "IOM Indonesia",
-				"audience": "potential irregular immigrants under IOM supervision (i.e. in detention centers)",
-				"details": "CLOs with relevant Dari/Farsi, Tamil and Arabic language skills meet with detainees on a regular basis to discuss Australian Government messaging and relevant news stories, and report back to IOM with information on detainee reactions and receptiveness to such messaging."
-			}, {
-				"type" : "Public Information Campaign Targeting Crew",
-				"provider" : "IOM Indonesia",
-				"audience": "potential people smuggling facilitators",
-				"details": "IOM spreads anti-smuggling awareness throughout 14 impoverished fishing villages in east Indonesia considered to be at risk of turning to people smuggling. Information is spread through a variety of channels - in the past these have included: hosting outdoor movie nights, handing out materials at booths in the market (which also provide family photo services and branded merchandise), providing religious leaders with smuggling-themed sermon booklets,  holding workshops with community leaders, and organizing \"Proud Fisherman Day\" festivities."
-			}, {
-				"type" : "Physical Advertising",
-				"provider" : "Leo Burnett (advertising agency)",
-				"audience": "potential irregular immigrants",
-				"details": "Leo Burnett has been engaged to deliver and place leaflets, posters, banners and billboards in 17 cities across Indonesia."
-			}, {
-				"type" : "Online Advertising",
-				"provider" : "Universal McCann (advertising agency)",
-				"audience": "potential irregular immigrants",
-				"details": "UM advertising is delivered through Cadreon (sponsored advertising on internet pages), Google search, Facebook and YouTube advertising. UM advertising targets those cohorts in Indonesia (Iranian, Afghan, Sri Lankan, Pakistani and Iraqi) searching in their native languages."
-			}];
-
-			/*
-			 * Goal: sort through my list of communication operations and console.log only the ones carried out by IOM
-			 */
-			for (var i=0;i < communicationOperations.length;i++) {
-				// stored in a variable for later reference
-				var op = communicationOperations[i];
-				// check if provider is IOM Indonesia
-				if (op.provider === "IOM Indonesia") {
-					// if so, log operation object
-					console.log(op);
-				} else {
-					// if not, print message
-					console.log("Not an IOM operation");
-				}
-			}
-
-		</script>
+		<script src="scripts.js"></script>
 	</body>
 </html>
