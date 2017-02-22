@@ -2,6 +2,11 @@ img {
 	max-width: 100%;
 }
 
+div#the_div_where_the_chart_goes {
+	height: 400px;
+	width: 600px;
+}
+
 .headline-box {
 	font-family: Impact;
 	font-size: 24px;
