@@ -30,23 +30,23 @@
 
 				// Create the data table.
 				var data = new google.visualization.DataTable();
-				data.addColumn('string', 'Topping');
-				data.addColumn('number', 'Slices');
-				data.addRows([['Mushrooms', 3], ['Onions', 1], ['Olives', 1], ['Zucchini', 1], ['Pepperoni', 2 ]]);
+				data.addColumn('string', 'Country of Origin');
+				data.addColumn('number', '# of Applications');
+				data.addRows([['Afghanistan', 3746], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244], ['Myanmar', 1023]]);
 
 				// Set chart options
 				var options = {
-					'title' : 'How Much Pizza I Ate Last Night',
+					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
 					'width' : 600,
 					'height' : 600,
-					'is3D' : true,
-					//'pieHole' : 0.3,
-					'slices': { 0: { offset: 0.3, textStyle: {color: 'pink', fontName: 'Impact', fontSize: 20  } }, 2: { color: 'transparent' } },
-					backgroundColor: 'gold',
-					fontName: 'Comic Sans MS',
+					'is3D' : false,
+					'pieHole' : 0,
+					'slices': {  },
+					backgroundColor: '',
+					fontName: 'Courier New',
 					fontSize: 12 ,
-					legend: { textStyle: { bold: true } },
-					titleTextStyle: { italic: true  }
+					legend: { textStyle: { bold: false } },
+					titleTextStyle: { italic: false  }
 				};
 
 				// Instantiate and draw our chart, passing in some options.
@@ -57,7 +57,6 @@
 
 	</head>
 	<body>
-		<div class="story-cell col-md-4" id="chart_div">.</div>
-		<script src="scripts.js"></script>
+		<div id="chart_div">.</div>
 	</body>
 </html>
