@@ -15,33 +15,29 @@
 		<script type="text/javascript">
 			// script example loade from https://developers.google.com/chart/interactive/docs/quick_start
 
-			// Load the Visualization API and the corechart package.
+			// load corechart package from the Google Charts libraries
 			google.charts.load('current', {
 				'packages' : ['corechart']
 			});
 
-			// Set a callback to run when the Google Visualization API is loaded.
-			google.charts.setOnLoadCallback(makePie);
+			// tell Google what to do after the load is complete
+			google.charts.setOnLoadCallback(makeMyChart);
 
-			// Callback that creates and populates a data table,
-			// instantiates the pie chart, passes in the data and
-			// draws it.
-			function makePie() {
+			// this function runs after the load
+			function makeMyChart() {
 
-				// Create the data table.
+				// populate the data that the chart will use
 				var myGoogleDataTable = new google.visualization.DataTable();
-				myGoogleDataTable.addColumn('string', 'Country of Origin');
-				myGoogleDataTable.addColumn('number', '# of Applications');
-				myGoogleDataTable.addRows([['Afghanistan', 3746], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244], ['Myanmar', 1023]]);
+				myGoogleDataTable.addColumn('string', 'Country of Origin'); // add a column
+				myGoogleDataTable.addColumn('number', '# of Pending Apps'); // another column
+				// once columns are defined, add the actual data (from UNHCR 2015 Mid-Year report)
+				myGoogleDataTable.addRows([['Afghanistan', 3746], ['Myanmar', 1023], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244]]);
 
-				// Set chart options
+				// customize the chart
 				var myChartConfigurationObject = {
 					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
 					'width' : 600,
-					'height' : 600,
-					'is3D' : false,
-					'pieHole' : 0,
-					'slices': {  },
+					'height' : 400,
 					backgroundColor: '',
 					fontName: 'Courier New',
 					fontSize: 12 ,
@@ -49,14 +45,15 @@
 					titleTextStyle: { italic: false  }
 				};
 
-				// Instantiate and draw our chart, passing in some options.
-				var myPieChart = new google.visualization.PieChart(document.getElementById('the_div_where_the_pie_chart_goes'));
-				myPieChart.draw(myGoogleDataTable, myChartConfigurationObject);
+				// find the DOM element and initiate a chart in it
+				var myBarChart = new google.visualization.ColumnChart(document.getElementById('the_div_where_the_chart_goes'));
+				// draw the chart
+				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
 			}
 		</script>
 
 	</head>
 	<body>
-		<div id="the_div_where_the_pie_chart_goes">.</div>
+		<div id="the_div_where_the_chart_goes">.</div>
 	</body>
 </html>
