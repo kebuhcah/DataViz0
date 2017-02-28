@@ -7,7 +7,13 @@
 		<!--
 			include bootstrap css for grid layout
 		-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="styles.css " />
 
 		<!--Load the AJAX API-->
@@ -83,8 +89,10 @@
 
 	</head>
 	<body>
-		<div id="the_div_where_the_chart_goes"></div>
-		<div id="the_div_where_the_second_chart_goes"></div>
+		<div class="row">
+			<div id="the_div_where_the_chart_goes" class="col-md-6"></div>
+			<div id="the_div_where_the_second_chart_goes" class="col-md-6"></div>
+		</div>
 		<div class="row">
 			<div class="story-cell col-md-6">
 				<div class="headline-box">
