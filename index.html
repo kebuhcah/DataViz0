@@ -21,7 +21,10 @@
 			});
 
 			// tell Google what to do after the load is complete
-			google.charts.setOnLoadCallback(makeMyChart);
+			google.charts.setOnLoadCallback(function() {
+				makeMyChart();
+				makeMySecondChart();
+			});
 
 			// this function runs after the load
 			function makeMyChart() {
@@ -49,11 +52,39 @@
 				// draw the chart
 				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
 			}
+			
+			function makeMySecondChart() {
+
+				// populate the data that the chart will use
+				var myGoogleDataTable = new google.visualization.DataTable();
+				myGoogleDataTable.addColumn('string', 'Country of Origin'); // add a column
+				myGoogleDataTable.addColumn('number', '# of Pending Apps'); // another column
+				// once columns are defined, add the actual data (from UNHCR 2015 Mid-Year report)
+				myGoogleDataTable.addRows([['Afghanistan', 3746], ['Myanmar', 1023], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244]]);
+
+				// customize the chart
+				var myChartConfigurationObject = {
+					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
+					'width' : 600,
+					'height' : 400,
+					fontName: 'Courier New',
+					fontSize: 12 ,
+					legend: { textStyle: { bold: false } },
+					titleTextStyle: { italic: false  }
+				};
+
+				// find the DOM element and initiate a chart in it
+				var myBarChart = new google.visualization.PieChart(document.getElementById('the_div_where_the_second_chart_goes'));
+				// draw the chart
+				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
+			}
+
 		</script>
 
 	</head>
 	<body>
 		<div id="the_div_where_the_chart_goes"></div>
+		<div id="the_div_where_the_second_chart_goes"></div>
 		<div class="row">
 			<div class="story-cell col-md-6">
 				<div class="headline-box">
