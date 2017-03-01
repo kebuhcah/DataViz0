@@ -8,16 +8,16 @@
 			include bootstrap css for grid layout
 		-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	
+
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="styles.css " />
 
 		<!--Load the AJAX API-->
-		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
 			// script example loade from https://developers.google.com/chart/interactive/docs/quick_start
 
@@ -27,9 +27,9 @@
 			});
 
 			// tell Google what to do after the load is complete
-			google.charts.setOnLoadCallback(function() {
-				makeMyChart();
-				makeMySecondChart();
+			google.charts.setOnLoadCallback(function() { // anonymous function to draw both charts
+				makeMyChart();				// column chart
+				makeMySecondChart();	// pie chart
 			});
 
 			// this function runs after the load
@@ -45,11 +45,11 @@
 				// customize the chart
 				var myChartConfigurationObject = {
 					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
-					'width' : 600,
+					'width' : 700,
 					'height' : 400,
 					fontName: 'Courier New',
 					fontSize: 12 ,
-					legend: { textStyle: { bold: false } },
+					legend: 'none',
 					titleTextStyle: { italic: false  }
 				};
 
@@ -58,25 +58,29 @@
 				// draw the chart
 				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
 			}
-			
+
+			// new chart for Week 6
 			function makeMySecondChart() {
 
 				// populate the data that the chart will use
 				var myGoogleDataTable = new google.visualization.DataTable();
 				myGoogleDataTable.addColumn('string', 'Country of Origin'); // add a column
-				myGoogleDataTable.addColumn('number', '# of Pending Apps'); // another column
+				myGoogleDataTable.addColumn('number', '# of New Apps'); // another column
 				// once columns are defined, add the actual data (from UNHCR 2015 Mid-Year report)
-				myGoogleDataTable.addRows([['Afghanistan', 3746], ['Myanmar', 1023], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244]]);
+				myGoogleDataTable.addRows([['Myanmar',  1009], ['Somalia',  281], ['Iraq',  177], ['Ethiopia',  162], ['Sri Lanka',  153], ['Afghanistan',  564]]);
 
 				// customize the chart
 				var myChartConfigurationObject = {
-					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
-					'width' : 600,
+					'title' : 'New Asylum Applications in Indonesia in the first half of 2015, by Country of Origin',
+					'width' : 700,
 					'height' : 400,
+					legend : { position: 'labeled' },
+					// ^ want to have second-largest slice in final position (counter-clockwise from 12 o'clock), as per WSJ style guide
+					// but that would make the default legend ordering confusing, so replaced with labeled legend
 					fontName: 'Courier New',
 					fontSize: 12 ,
-					legend: { textStyle: { bold: false } },
-					titleTextStyle: { italic: false  }
+					titleTextStyle: { italic: false  },
+					pieSliceText: 'none'
 				};
 
 				// find the DOM element and initiate a chart in it
