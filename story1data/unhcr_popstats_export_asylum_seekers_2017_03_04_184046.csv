@@ -1,0 +1,77 @@
+"Extracted from the UNHCR Population Statistics Reference Database","United Nations High Commissioner for Refugees"
+"Date extracted: 2017-03-04 18:40:46 +01:00"
+
+Year,"Country / territory of asylum/residence",Origin,"RSD procedure type / level","Total persons pending start-year","of which UNHCR-assisted","Applied during year",statistics.filter.decisions_recognized,statistics.filter.decisions_other,Rejected,"Otherwise closed","Total decisions","Total persons pending end-year","of which UNHCR-assisted"
+2015,Indonesia,Afghanistan,"U / AR",122,122,89,50,,54,,104,107,107
+2015,Indonesia,Afghanistan,"U / FI",4052,4052,1315,1462,,59,171,1692,3675,3675
+2015,Indonesia,Benin,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Bangladesh,"U / AR",,,8,,,,,,8,8
+2015,Indonesia,Bangladesh,"U / FI",52,52,110,,,7,58,65,97,97
+2015,Indonesia,Bhutan,"U / FI",*,*,,,,,0,,*,*
+2015,Indonesia,"Central African Rep.","U / AR",,,*,,,,,,*,*
+2015,Indonesia,"Central African Rep.","U / FI",*,*,,,,*,0,*,*,*
+2015,Indonesia,China,"U / AR",7,7,,,,,*,*,6,6
+2015,Indonesia,China,"U / FI",8,8,5,*,,*,*,7,6,6
+2015,Indonesia,"Côte d'Ivoire","U / AR",*,*,5,,,,,,6,6
+2015,Indonesia,"Côte d'Ivoire","U / FI",8,8,5,,,*,*,6,7,7
+2015,Indonesia,Cameroon,"U / AR",*,*,*,,,*,,*,*,*
+2015,Indonesia,Cameroon,"U / FI",8,8,11,*,,*,*,*,15,15
+2015,Indonesia,"Dem. Rep. of the Congo","U / AR",*,*,*,*,,,,*,*,*
+2015,Indonesia,"Dem. Rep. of the Congo","U / FI",11,11,9,,,*,,*,19,19
+2015,Indonesia,Congo,"U / AR",*,*,*,,,,*,*,*,*
+2015,Indonesia,Congo,"U / FI",*,*,,,,*,*,*,*,*
+2015,Indonesia,Algeria,"U / AR",*,*,,,,,*,*,*,*
+2015,Indonesia,Algeria,"U / FI",*,*,*,,,,,,*,*
+2015,Indonesia,Egypt,"U / FI",10,10,7,,,,6,6,11,11
+2015,Indonesia,Eritrea,"U / FI",11,11,8,*,,,,*,15,15
+2015,Indonesia,"Western Sahara","U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Ethiopia,"U / AR",,,*,*,,,,*,0,0
+2015,Indonesia,Ethiopia,"U / FI",93,93,175,20,,*,,24,244,244
+2015,Indonesia,Ghana,"U / AR",,,*,,,,,,*,*
+2015,Indonesia,Ghana,"U / FI",5,5,*,,,*,*,*,*,*
+2015,Indonesia,Guinea,"U / FI",8,8,*,,,,0,,11,11
+2015,Indonesia,Gambia,"U / AR",,,*,,,,,,*,*
+2015,Indonesia,Gambia,"U / FI",*,*,*,,,*,0,*,*,*
+2015,Indonesia,India,"U / AR",,,*,,,,,,*,*
+2015,Indonesia,India,"U / FI",10,10,5,,,*,7,8,7,7
+2015,Indonesia,"Iran (Islamic Rep. of)","U / AR",153,153,87,6,,72,,78,162,162
+2015,Indonesia,"Iran (Islamic Rep. of)","U / FI",432,432,55,133,,107,68,308,179,179
+2015,Indonesia,Iraq,"U / AR",19,19,*,21,,,,21,*,*
+2015,Indonesia,Iraq,"U / FI",455,455,440,108,,,133,241,654,654
+2015,Indonesia,Jordan,"U / AR",*,*,*,,,*,*,*,0,0
+2015,Indonesia,Jordan,"U / FI",*,*,*,,,*,*,*,0,0
+2015,Indonesia,Cambodia,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Kuwait,"U / FI",8,8,*,5,,,0,5,*,*
+2015,Indonesia,Lebanon,"U / AR",*,*,*,,,,*,*,0,0
+2015,Indonesia,Lebanon,"U / FI",*,*,*,,,*,0,*,*,*
+2015,Indonesia,Liberia,"U / FI",,,14,,,,*,*,13,13
+2015,Indonesia,Libya,"U / FI",*,*,*,,,,*,*,*,*
+2015,Indonesia,"Sri Lanka","U / AR",65,65,45,12,,20,,32,78,78
+2015,Indonesia,"Sri Lanka","U / FI",192,192,169,60,,33,53,146,215,215
+2015,Indonesia,Morocco,"U / FI",,,*,,,,*,*,0,0
+2015,Indonesia,Mali,"U / AR",*,*,*,,,*,,*,*,*
+2015,Indonesia,Mali,"U / FI",*,*,5,,,*,*,*,7,7
+2015,Indonesia,Myanmar,"U / AR",*,*,,,,*,,*,0,0
+2015,Indonesia,Myanmar,"U / FI",51,51,1034,58,,,608,666,419,419
+2015,Indonesia,Nigeria,"U / AR",,,*,,,,,,*,*
+2015,Indonesia,Nigeria,"U / FI",52,52,106,,,*,10,11,147,147
+2015,Indonesia,Nepal,"U / FI",*,*,*,,,,*,*,*,*
+2015,Indonesia,Pakistan,"U / AR",*,*,10,,,*,,*,12,12
+2015,Indonesia,Pakistan,"U / FI",241,241,65,138,,10,15,163,143,143
+2015,Indonesia,Palestinian,"U / AR",*,*,*,*,,,,*,*,*
+2015,Indonesia,Palestinian,"U / FI",185,185,73,95,,*,,96,162,162
+2015,Indonesia,"Saudi Arabia","U / FI",*,*,,,,,*,*,0,0
+2015,Indonesia,Sudan,"U / AR",5,5,7,,,*,,*,8,8
+2015,Indonesia,Sudan,"U / FI",133,133,129,53,,8,21,82,180,180
+2015,Indonesia,"Sierra Leone","U / FI",6,6,18,,,,0,,24,24
+2015,Indonesia,Somalia,"U / AR",*,*,6,*,,*,,*,6,6
+2015,Indonesia,Somalia,"U / FI",430,430,481,159,,5,29,193,718,718
+2015,Indonesia,"Syrian Arab Rep.","U / AR",*,*,,,,*,,*,0,0
+2015,Indonesia,"Syrian Arab Rep.","U / FI",42,42,20,19,,,11,30,32,32
+2015,Indonesia,Togo,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Thailand,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Tunisia,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Uganda,"U / FI",*,*,,*,,,0,*,0,0
+2015,Indonesia,Ukraine,"U / FI",,,*,,,,0,,*,*
+2015,Indonesia,Yemen,"U / AR",*,*,,,,,*,*,0,0
+2015,Indonesia,Yemen,"U / FI",20,20,142,*,,,7,9,153,153
