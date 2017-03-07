@@ -115,3 +115,6 @@ function doTheLoop(theList) {
 	console.log("DONE")
 }
 
+
+
+console.log(unhcrData)

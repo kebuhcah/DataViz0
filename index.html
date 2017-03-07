@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Week 6 Lab Assignment</title>
 		<!--
-			include bootstrap css for grid layout
+		include bootstrap css for grid layout
 		-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,78 +18,8 @@
 
 		<!--Load the AJAX API-->
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-			// script example loade from https://developers.google.com/chart/interactive/docs/quick_start
-
-			// load corechart package from the Google Charts libraries
-			google.charts.load('current', {
-				'packages' : ['corechart']
-			});
-
-			// tell Google what to do after the load is complete
-			google.charts.setOnLoadCallback(function() { // anonymous function to draw both charts
-				makeMyChart();				// column chart
-				makeMySecondChart();	// pie chart
-			});
-
-			// this function runs after the load
-			function makeMyChart() {
-
-				// populate the data that the chart will use
-				var myGoogleDataTable = new google.visualization.DataTable();
-				myGoogleDataTable.addColumn('string', 'Country of Origin'); // add a column
-				myGoogleDataTable.addColumn('number', '# of Pending Apps'); // another column
-				// once columns are defined, add the actual data (from UNHCR 2015 Mid-Year report)
-				myGoogleDataTable.addRows([['Afghanistan', 3746], ['Myanmar', 1023], ['Somalia', 596], ['Iraq', 460], ['Sri Lanka', 278], ['Ethiopia', 244]]);
-
-				// customize the chart
-				var myChartConfigurationObject = {
-					'title' : 'Pending Asylum Applications in Indonesia as of Jun 30, 2015, by Country of Origin',
-					'width' : 700,
-					'height' : 400,
-					fontName: 'Courier New',
-					fontSize: 12 ,
-					legend: 'none',
-					titleTextStyle: { italic: false  }
-				};
-
-				// find the DOM element and initiate a chart in it
-				var myBarChart = new google.visualization.ColumnChart(document.getElementById('the_div_where_the_chart_goes'));
-				// draw the chart
-				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
-			}
-
-			// new chart for Week 6
-			function makeMySecondChart() {
-
-				// populate the data that the chart will use
-				var myGoogleDataTable = new google.visualization.DataTable();
-				myGoogleDataTable.addColumn('string', 'Country of Origin'); // add a column
-				myGoogleDataTable.addColumn('number', '# of New Apps'); // another column
-				// once columns are defined, add the actual data (from UNHCR 2015 Mid-Year report)
-				myGoogleDataTable.addRows([['Myanmar',  1009], ['Somalia',  281], ['Iraq',  177], ['Ethiopia',  162], ['Sri Lanka',  153], ['Afghanistan',  564]]);
-
-				// customize the chart
-				var myChartConfigurationObject = {
-					'title' : 'New Asylum Applications in Indonesia in the first half of 2015, by Country of Origin',
-					'width' : 700,
-					'height' : 400,
-					legend : { position: 'labeled' },
-					// ^ want to have second-largest slice in final position (counter-clockwise from 12 o'clock), as per WSJ style guide
-					// but that would make the default legend ordering confusing, so replaced with labeled legend
-					fontName: 'Courier New',
-					fontSize: 12 ,
-					titleTextStyle: { italic: false  },
-					pieSliceText: 'none'
-				};
-
-				// find the DOM element and initiate a chart in it
-				var myBarChart = new google.visualization.PieChart(document.getElementById('the_div_where_the_second_chart_goes'));
-				// draw the chart
-				myBarChart.draw(myGoogleDataTable, myChartConfigurationObject);
-			}
-
-		</script>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="chartscripts.js" ></script>
 
 	</head>
 	<body>
@@ -102,13 +32,11 @@
 				<div class="story-cell col-md-6">
 					<div class="headline-box">
 						<!-- each headline is also a link to a relevant article -->
-						<a href="http://www.balkaninsight.com/en/article/operation-storm-croatia-s-triumph-serbia-s-grief-07-31-2015">
-							Origins: Operation "Storm" and the Fall of the Serbian Krajina
-						</a>
+						<a href="http://www.balkaninsight.com/en/article/operation-storm-croatia-s-triumph-serbia-s-grief-07-31-2015"> Origins: Operation "Storm" and the Fall of the Serbian Krajina </a>
 					</div>
 					<div class="thumbnail-box">
 						<!-- this is an image from the linked article,
-							but because the other articles don't have interesting images in them I found images for those elsewhere  -->
+						but because the other articles don't have interesting images in them I found images for those elsewhere  -->
 						<img src="http://www.balkaninsight.com/en/file/show//Images/Balkan%20Transitional%20Justice/Events/Oluja_1995.jpg" />
 					</div>
 					<div class="summary-box">
@@ -117,60 +45,71 @@
 							While refugee flows in the former Yugoslavia had been ongoing since the beginning of the conflict in 1991,
 							1995's Operation Storm - the Croatian Army's final major offensive against rebel Serb forces - resulted in the largest single wave of migration as ethnic Serb residents of the Krajina region fled their homes en masse.
 						</p>
-						<p>This article from Balkan Insight provides more background to this pivotal event in the Yugoslav Wars, and explores how different interpretations of this operation continue to divide Croatia and Serbia to this day.</p>
+						<p>
+							This article from Balkan Insight provides more background to this pivotal event in the Yugoslav Wars, and explores how different interpretations of this operation continue to divide Croatia and Serbia to this day.
+						</p>
 					</div>
 				</div>
 				<div class="story-cell col-md-6">
 					<div class="headline-box">
-						<a href="http://www.kirs.gov.rs/articles/rprocess.php?lang=ENG">
-							Brief History of Regional Efforts to Resolve the Refugee Issue
-						</a>
+						<a href="http://www.kirs.gov.rs/articles/rprocess.php?lang=ENG"> Brief History of Regional Efforts to Resolve the Refugee Issue </a>
 					</div>
 					<div class="thumbnail-box">
 						<img src="http://regionalhousingprogramme.org/wp-content/plugins/global-gallery/albums/SRB3%20-%20Ovca,%20September%202016/IMG_8943.jpg" />
 					</div>
 					<div class="summary-box">
-						<p>Croatia's campaign to join the European Union brought new impetus to efforts to resolve the remaining disputes among Yugoslavia's successor states, of which the refugee situation was a major component.</p>
-						<p>This overview from the Serbian Commissariat for Refugees and Migration details a number of regional initatives that began after 2008, more than decade after the end of armed conflict in Croatia and Bosnia.</p>
-						<p>(Image: a housing project in Ovca, Serbia, September 2016, from the <a href="http://regionalhousingprogramme.org/media/photos/serbia-photos/srb3-photo-gallery/">Regional Housing Program website</a>)</p>
+						<p>
+							Croatia's campaign to join the European Union brought new impetus to efforts to resolve the remaining disputes among Yugoslavia's successor states, of which the refugee situation was a major component.
+						</p>
+						<p>
+							This overview from the Serbian Commissariat for Refugees and Migration details a number of regional initatives that began after 2008, more than decade after the end of armed conflict in Croatia and Bosnia.
+						</p>
+						<p>
+							(Image: a housing project in Ovca, Serbia, September 2016, from the <a href="http://regionalhousingprogramme.org/media/photos/serbia-photos/srb3-photo-gallery/">Regional Housing Program website</a>)
+						</p>
 					</div>
-				</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="story-cell col-md-6">
-					<div class="headline-box">
-						<a href="http://www.yucom.org.rs/upload/Studija%20izbegli%20Hrvatska%20_ENG_PRIPREMA%20%281%29.pdf">
-							Study Regarding the State Rights of Refugees from the Republic of Croatia
-						</a>
-					</div>
-					<div class="thumbnail-box">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Map_of_war_in_Yugoslavia%2C_1993.png" />
-					</div>
-					<div class="summary-box">
-						<p>This study, published by a Serbian human rights NGO and co-funded by the Croatian government and the European Union,
+		</div>
+		<div class="row">
+			<div class="story-cell col-md-6">
+				<div class="headline-box">
+					<a href="http://www.yucom.org.rs/upload/Studija%20izbegli%20Hrvatska%20_ENG_PRIPREMA%20%281%29.pdf"> Study Regarding the State Rights of Refugees from the Republic of Croatia </a>
+				</div>
+				<div class="thumbnail-box">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Map_of_war_in_Yugoslavia%2C_1993.png" />
+				</div>
+				<div class="summary-box">
+					<p>
+						This study, published by a Serbian human rights NGO and co-funded by the Croatian government and the European Union,
 						provides a detailed analysis of the current refugee situation in the region, and examines refugees' attitude towards both return to Croatia and local integration in Serbia -
-						which are often complicated by questions of national identity and allegiance.</p>
-						<p>(Image: <a href="https://commons.wikimedia.org/wiki/File:Map_of_war_in_Yugoslavia,_1993.png">Wikimedia</a>)</p>
-					</div>
-				</div>
-				<div class="story-cell col-md-6">
-					<div class="headline-box">
-						<a href="http://reliefweb.int/sites/reliefweb.int/files/resources/8685D344FF6A1B76C12576F2004CFE90-Full_Report.pdf">
-							Report: Tenancy Rights as an Impediment to Return
-						</a>
-					</div>
-					<div class="thumbnail-box">
-						<img src="http://www.kaportal.hr/portal/wp-content/uploads/2010/11/R-50632.jpg" />
-					</div>
-					<div class="summary-box">
-						<p>While the number of refugees from Croatia and Bosnia in Serbia at the end of the war was roughly equal, refugees from Croatia now constitute around 80% of those remaining in Serbia.</p>
-						<p>A major reason for this discrepancy has been the difficulties that Serb refugees face in securing tenancy rights to their prior homes. This study examines these difficulties and their causes in some detail.</p>
-						<p>(Image: apartments in Karlovac, Croatia that the Croatian government has made available to returnees at favorable prices, from
-							<a href="http://kaportal.rtl.hr/vlada-srbima-povratnicima-omogucila-kupnju-dodijeljenih-stanova-u-karlovcu-njih-180/">a local Karlovac news site</a>)</p>
-					</div>
+						which are often complicated by questions of national identity and allegiance.
+					</p>
+					<p>
+						(Image: <a href="https://commons.wikimedia.org/wiki/File:Map_of_war_in_Yugoslavia,_1993.png">Wikimedia</a>)
+					</p>
 				</div>
 			</div>
+			<div class="story-cell col-md-6">
+				<div class="headline-box">
+					<a href="http://reliefweb.int/sites/reliefweb.int/files/resources/8685D344FF6A1B76C12576F2004CFE90-Full_Report.pdf"> Report: Tenancy Rights as an Impediment to Return </a>
+				</div>
+				<div class="thumbnail-box">
+					<img src="http://www.kaportal.hr/portal/wp-content/uploads/2010/11/R-50632.jpg" />
+				</div>
+				<div class="summary-box">
+					<p>
+						While the number of refugees from Croatia and Bosnia in Serbia at the end of the war was roughly equal, refugees from Croatia now constitute around 80% of those remaining in Serbia.
+					</p>
+					<p>
+						A major reason for this discrepancy has been the difficulties that Serb refugees face in securing tenancy rights to their prior homes. This study examines these difficulties and their causes in some detail.
+					</p>
+					<p>
+						(Image: apartments in Karlovac, Croatia that the Croatian government has made available to returnees at favorable prices, from <a href="http://kaportal.rtl.hr/vlada-srbima-povratnicima-omogucila-kupnju-dodijeljenih-stanova-u-karlovcu-njih-180/">a local Karlovac news site</a>)
+					</p>
+				</div>
+			</div>
+		</div>
 		</div>
 		<script src="scripts.js"></script>
 	</body>
